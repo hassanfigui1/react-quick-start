@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Arrow from './components/arrow-functional-componant/arrow';
+
 class App extends React.Component {
   render() {
-    return <Arrow/>;
+    return <h1>FDFDFS</h1>;
   }
 }
 // function App() {
