@@ -4,12 +4,12 @@
 // import '@fontsource/roboto/700.css';
 import React from 'react';
 import './App.css';
-import Students from './components/list-rendering/list';
+import Form from './components/form/form';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <Students/>
+      <div className='center'> 
+        <Form/>
       </div>
 
     );
