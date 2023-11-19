@@ -4,12 +4,12 @@
 // import '@fontsource/roboto/700.css';
 import React from 'react';
 import './App.css';
-import Increment from './components/learnings/increment';
+import Students from './components/list-rendering/list';
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Increment></Increment>
+        <Students/>
       </div>
 
     );

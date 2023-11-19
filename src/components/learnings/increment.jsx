@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Increment extends Component {
+export default class Increment extends Component {
   constructor() {
     super();
     this.state = {
@@ -8,21 +8,30 @@ class Increment extends Component {
     };
   }
   incrementVal() {
-      this.setState({
-        id: this.state.id + 1,
-      }, ()=> console.log('callback value: ', this.state.id));
-    
-    console.log('real value: ', this.state.id)
+    // this.setState(
+    //   {
+    //     id: this.state.id + 1,
+    //   },
+    //   () => console.log('callback value: ', this.state.id)
+    // );
+    this.setState(prevState =>({
+      id: prevState.id
+    }))
+    console.log('real value: ', this.state.id);
   }
-
+  increment() {
+    this.incrementVal();
+    this.incrementVal();
+    this.incrementVal();
+    this.incrementVal();
+    this.incrementVal();
+  }
   render() {
     return (
       <div>
         <h1>{this.state.id}</h1>
-        <button onClick={() => this.incrementVal()}>Increment value</button>
+        <button onClick={() => this.increment()}>Increment value</button>
       </div>
     );
   }
 }
-
-export default Increment;
