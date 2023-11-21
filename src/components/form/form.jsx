@@ -1,8 +1,9 @@
+import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import React, { Component } from 'react';
 import './form.css';
-
 export class Form extends Component {
   constructor(props) {
     super(props);
@@ -32,12 +33,21 @@ export class Form extends Component {
   render() {
     return (
       <div>
-        <h1>Hello : {this.result}</h1>
+        <div className='flex-row'>
+          <h1>Formulaire d'inscription</h1>
+          <IconButton aria-label='close'>
+            <CloseIcon />
+          </IconButton>
+        </div>
         <form className='flex' onSubmit={this.handleSubmit}>
           <div className='flex-row'>
             <TextField
               id='outlined-basic'
               value={this.state.username}
+              className='user-username'
+              inputProps={{
+                style: {textAlign: 'center'},
+              }}
               onChange={this.handlerUsernameChange}
               label='Outlined'
               required
@@ -64,7 +74,8 @@ export class Form extends Component {
               <option value='Vue Js'>Vue Js</option>
             </select>
           </div>
-          <div className='mt-24 flex-row flex-right'>
+          <div className='component-actions m-24 flex-row flex-right'>
+            <Button variant='outlined'>Cancel</Button>
             <Button
               variant='contained'
               onClick={() => alert(this.state.username)}>

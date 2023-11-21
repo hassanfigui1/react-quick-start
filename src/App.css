@@ -5,11 +5,15 @@
 
   background-color: aliceblue;
 }
+.user-username{
+  width: 100%;
+}
 .center {
   margin: auto;
   width: 33%;
   padding: 10px;
   margin-top: 67px;
+  border: 1px solid currentColor;
 } 
 .App-logo {
   height: 40vmin;

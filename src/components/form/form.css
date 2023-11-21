@@ -9,6 +9,9 @@
     margin-top: 24px;
     flex-direction: row;
 }
+.component-actions{
+    gap: 8px;
+}
 .m-24{
     margin-top: 24px;
 }
