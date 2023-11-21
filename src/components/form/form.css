@@ -12,3 +12,9 @@
 .m-24{
     margin-top: 24px;
 }
+.mt-24{
+    margin-top: 24px;
+}
+.flex-right {
+    justify-content: flex-end;
+}
