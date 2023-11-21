@@ -35,7 +35,6 @@ export class Form extends Component {
         <h1>Hello : {this.result}</h1>
         <form className='flex' onSubmit={this.handleSubmit}>
           <div className='flex-row'>
-            <label htmlFor='Username'>Username </label>
             <TextField
               id='outlined-basic'
               value={this.state.username}
@@ -47,7 +46,6 @@ export class Form extends Component {
             />
           </div>
           <div className='flex-row'>
-            <label htmlFor=''>Comments</label>
             <textarea
               value={this.state.comments}
               name=''
@@ -56,20 +54,22 @@ export class Form extends Component {
               rows='2'></textarea>
           </div>
           <div className='flex-row'>
-            <label
-              htmlFor=''
+            <select
+              name=''
+              id=''
               value={this.state.skill}
               onChange={this.skillHandler}>
-              Topic
-            </label>
-            <select name='' id=''>
               <option value='React'>React</option>
               <option value='Angular'>Angular</option>
               <option value='Vue Js'>Vue Js</option>
             </select>
           </div>
           <div className='mt-24 flex-row flex-right'>
-            <Button variant='contained' onClick={()=>alert(this.state.username)}>Submit</Button>
+            <Button
+              variant='contained'
+              onClick={() => alert(this.state.username)}>
+              Submit
+            </Button>
           </div>
         </form>
       </div>
