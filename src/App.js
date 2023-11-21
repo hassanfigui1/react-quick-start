@@ -4,11 +4,15 @@
 // import '@fontsource/roboto/700.css';
 import React from 'react';
 import './App.css';
-import CustomizedDialogs from './dialogs/add-dialog.component';
-
+import Form from './components/form/form';
 class App extends React.Component {
   render() {
-    return <CustomizedDialogs name={'hassan figuigui'}></CustomizedDialogs>;
+    return (
+      <div className='center'> 
+        <Form/>
+      </div>
+
+    );
   }
 }
 // function App() {

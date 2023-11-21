@@ -1,0 +1,20 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+    /* margin: 24px 24px 0 24px; */
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    flex-direction: row;
+}
+.m-24{
+    margin-top: 24px;
+}
+.mt-24{
+    margin-top: 24px;
+}
+.flex-right {
+    justify-content: flex-end;
+}
